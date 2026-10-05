@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Norton Support Resources</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f5f5f5;
+        color: #151515;
+        line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+        background: #111820;
+        color: white;
+        padding: 18px 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 4px solid #ffe000;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .brand-icon {
+        width: 42px;
+        height: 42px;
+        background: #ffe000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #111820;
+        font-size: 24px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+        font-size: 14px;
+    }
+
+    nav a:hover {
+        color: #ffe000;
+    }
+
+    /* NOTICE */
+    .notice {
+        background: #fff4c2;
+        border-bottom: 1px solid #ead36a;
+        padding: 10px 7%;
+        text-align: center;
+        font-size: 13px;
+        color: #4b4200;
+    }
+
+    /* HERO */
+    .hero {
+        background: linear-gradient(120deg, #111820, #202b35);
+        color: white;
+        padding: 75px 7%;
+    }
+
+    .hero-content {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+        color: #ffe000;
+    }
+
+    .hero p {
+        color: #d9dde0;
+        max-width: 700px;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        margin-top: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 13px 24px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 5px;
+        transition: .2s;
+    }
+
+    .btn-yellow {
+        background: #ffe000;
+        color: #111820;
+    }
+
+    .btn-dark {
+        border: 1px solid #fff;
+        color: white;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+
+    /* MAIN */
+    .container {
+        max-width: 1150px;
+        margin: auto;
+        padding: 55px 20px;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+
+    .section-title p {
+        color: #666;
+    }
+
+    /* CARDS */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    .card {
+        background: white;
+        padding: 28px;
+        border-radius: 12px;
+        border: 1px solid #e2e2e2;
+        box-shadow: 0 5px 18px rgba(0,0,0,.05);
+    }
+
+    .card-icon {
+        width: 52px;
+        height: 52px;
+        background: #ffe000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    .card h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .card p {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .card-button {
+        display: inline-block;
+        padding: 10px 17px;
+        background: #111820;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .card-button:hover {
+        background: #ffe000;
+        color: #111820;
+    }
+
+    /* FORM */
+    .form-section {
+        background: white;
+        max-width: 800px;
+        margin: 20px auto 0;
+        padding: 35px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 7px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 15px;
+        font-family: inherit;
+    }
+
+    textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .submit-button {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 6px;
+        background: #ffe000;
+        color: #111820;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .submit-button:hover {
+        background: #e7c900;
+    }
+
+    /* SECURITY WARNING */
+    .security-box {
+        margin-top: 30px;
+        background: #fff8dc;
+        border-left: 5px solid #ffe000;
+        padding: 18px;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    .security-box strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #111820;
+        color: #bbb;
+        text-align: center;
+        padding: 35px 20px;
+        margin-top: 40px;
+        font-size: 13px;
+    }
+
+    footer a {
+        color: #ffe000;
+        text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+
+        header {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav a {
+            margin: 0 8px;
+        }
+
+        .hero h1 {
+            font-size: 34px;
+        }
+
+        .cards {
+            grid-template-columns: 1fr;
+        }
+
+        .form-section {
+            padding: 25px 18px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="brand">
+        <div class="brand-icon">✓</div>
+        <span>Norton Support Resources</span>
+    </div>
+
+    <nav>
+        <a href="#support">Support</a>
+        <a href="#refund">Refunds</a>
+        <a href="#tools">Tools</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<div class="notice">
+    Independent support-resource page. This website is not operated by or affiliated
+    with Norton or Gen Digital.
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Norton <span>Support</span>
+        </h1>
+
+        <p>
+            Find support resources, remote-assistance tools, cancellation
+            information and submit a support request.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                class="btn btn-yellow"
+                href="https://support.norton.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Official Norton Support
+            </a>
+
+            <a
+                class="btn btn-dark"
+                href="#support">
+                Get Support
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SUPPORT -->
+
+<section class="container" id="support">
+
+    <div class="section-title">
+
+        <h2>Support Resources</h2>
+
+        <p>
+            Select the resource that matches the assistance you need.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <!-- NORTON -->
+
+        <div class="card">
+
+            <div class="card-icon">🛡</div>
+
+            <h3>Official Norton Support</h3>
+
+            <p>
+                Visit Norton's official support center for product help,
+                account assistance, troubleshooting and other support options.
+            </p>
+
+            <a
+                class="card-button"
+                href="https://support.norton.com/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Visit Norton Support
+            </a>
+
+        </div>
+
+
+        <!-- SUPREMO -->
+
+        <div class="card">
+
+            <div class="card-icon">💻</div>
+
+            <h3>Supremo — Windows</h3>
+
+            <p>
+                Download Supremo from its official website when remote
+                technical assistance has been arranged.
+            </p>
+
+            <a
+                class="card-button"
+                href="https://www.supremocontrol.com/download-supremo/windows/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Download Supremo
+            </a>
+
+        </div>
+
+
+        <!-- ULTRAVIEWER -->
+
+        <div class="card">
+
+            <div class="card-icon">🖥</div>
+
+            <h3>UltraViewer — Windows</h3>
+
+            <p>
+                Download UltraViewer from its official website for
+                Windows-based remote assistance.
+            </p>
+
+            <a
+                class="card-button"
+                href="https://www.ultraviewer.net/en/download.html"
+                target="_blank"
+                rel="noopener noreferrer">
+                Download UltraViewer
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CANCELLATION / REFUND -->
+
+<section class="container" id="refund">
+
+    <div class="section-title">
+
+        <h2>Cancellation & Refund</h2>
+
+        <p>
+            Submit a request for cancellation or refund review.
+        </p>
+
+    </div>
+
+
+    <div class="form-section">
+
+        <form id="supportForm">
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="order">
+                    Order / Subscription ID
+                </label>
+
+                <input
+                    type="text"
+                    id="order"
+                    name="order">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="request">
+                    Request Type
+                </label>
+
+                <select id="request" name="request" required>
+
+                    <option value="">
+                        Select an option
+                    </option>
+
+                    <option value="cancellation">
+                        Subscription Cancellation
+                    </option>
+
+                    <option value="refund">
+                        Refund Request
+                    </option>
+
+                    <option value="billing">
+                        Billing Question
+                    </option>
+
+                    <option value="technical">
+                        Technical Support
+                    </option>
+
+                    <option value="other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="message">
+                    Describe Your Request
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Describe the issue or request..."></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Authorization
+                </label>
+
+                <label style="font-weight:normal;">
+
+                    <input
+                        type="checkbox"
+                        required
+                        style="width:auto; margin-right:8px;">
+
+                    I authorize this request to be reviewed.
+
+                </label>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="submit-button">
+
+                Submit Support Request
+
+            </button>
+
+        </form>
+
+
+        <div
+            class="security-box">
+
+            <strong>Security reminder</strong>
+
+            Never enter your banking password, PIN, one-time password (OTP),
+            recovery codes or remote-access credentials into a support form.
+            Only provide remote access when you understand who is connecting
+            and why.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OTHER APPS -->
+
+<section class="container" id="tools">
+
+    <div class="section-title">
+
+        <h2>Other Support Tools</h2>
+
+        <p>
+            Additional applications can be added here.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">+</div>
+
+            <h3>Add Application</h3>
+
+            <p>
+                Add another legitimate support or troubleshooting application
+                here.
+            </p>
+
+            <a
+                class="card-button"
+                href="#">
+                Add Link
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">+</div>
+
+            <h3>Diagnostic Tool</h3>
+
+            <p>
+                Space for an approved diagnostic or troubleshooting resource.
+            </p>
+
+            <a
+                class="card-button"
+                href="#">
+                Add Tool
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">+</div>
+
+            <h3>Help Center</h3>
+
+            <p>
+                Add a verified documentation or knowledge-base resource here.
+            </p>
+
+            <a
+                class="card-button"
+                href="#">
+                Add Resource
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="container" id="contact">
+
+    <div class="section-title">
+
+        <h2>Need More Help?</h2>
+
+        <p>
+            For Norton account, subscription, cancellation or product issues,
+            use Norton's official support channels.
+        </p>
+
+        <br>
+
+        <a
+            class="btn btn-yellow"
+            href="https://support.norton.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Open Official Norton Support
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Independent Support Resources
+    </p>
+
+    <p style="margin-top:8px;">
+        This website is not affiliated with Norton, Gen Digital,
+        Supremo or UltraViewer.
+    </p>
+
+</footer>
+
+
+<script>
+
+document
+    .getElementById("supportForm")
+    .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        alert(
+            "Your support request has been prepared. " +
+            "Connect this form to your approved form backend to receive submissions."
+        );
+
+    });
+
+</script>
+
+</body>
+</html>
